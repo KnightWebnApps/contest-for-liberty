@@ -1,6 +1,8 @@
 <script>
 	import DonationDropdown from '../components/DonationDropdown.svelte';
 
+	import Modal from 'svelte-simple-modal';
+
 	export let segment;
 </script>
 
@@ -77,7 +79,9 @@
 		<li><a class='{segment === "resources" ? "selected" : ""}' href='resources'>Resources</a></li>
 		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>Blog</a></li>
 		<li><a class='{segment === "podcast" ? "selected" : ""}' href='podcast'>Podcast</a></li>
-		<li > <DonationDropdown /> </li>
+		<li > <Modal> <DonationDropdown /> </Modal> </li>
 		<li class="brand">LOGO</li>
 	</ul>
 </nav>
+
+<Modal></Modal>
