@@ -51,8 +51,8 @@
                 {price: selectedDonation, quantity: 1}
             ],
             mode: 'payment',
-            successUrl: 'http://localhost:3000/success',
-            cancelUrl: 'http://localhost:3000/',
+            successUrl: 'https://contestforliberty/success',
+            cancelUrl: 'https://contestforliberty.com/',
         }).then(function (result) {
         // If `redirectToCheckout` fails due to a browser or network
         // error, display the localized error message to your customer
