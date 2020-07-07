@@ -5,14 +5,14 @@
 <header>
     <h1>Contest For Liberty 🔔</h1>
 
-    <h3>If the news won't give you the documents, we will.</h3>
+    <p>If the news won't give you the documents, we will.</p>
 
     <div class="quote">
     
         <blockquote>
             “If liberty means anything at all, it means the right to tell people what they do not want to hear.” 
         </blockquote>
-        <p>- George Orwell</p>
+        <p class="quote-author">- George Orwell</p>
     
     </div>
 
@@ -33,7 +33,7 @@
         font-size: 24px;
     }
 
-    p {
+    .quote-author {
         text-align: right;
         padding: 0 4em;
 

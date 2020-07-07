@@ -7,6 +7,7 @@ body {
 	background-color: #333;
 	
 	color: #f0f0f0;
+	--extra-light: #ffffff;
 	--light: #f0f0f0;
 	--dark: #5c5c5c;
 	--red: #ff3e00;

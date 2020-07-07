@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Podcast: Contest For Liberty</title>
+</svelte:head>
+
 <script>
     // your script goes here
 </script>

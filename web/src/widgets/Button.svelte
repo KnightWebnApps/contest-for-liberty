@@ -12,7 +12,7 @@
         padding: .5em .7em;
         margin: 1em;
         background-color: var(--primary-color);
-        color: var(--light);
+        color: var(--extra-light);
     }
 </style>
 

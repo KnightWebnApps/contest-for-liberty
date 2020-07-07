@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Contest For Liberty</title>
+</svelte:head>
+
 <script>
     // your script goes here
 </script>

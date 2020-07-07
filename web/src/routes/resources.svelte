@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Resources</title>
+</svelte:head>
+
 <script context="module">
   import client from '../sanityClient'
 	export function preload({ params, query }) {
