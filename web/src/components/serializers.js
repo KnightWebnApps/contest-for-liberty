@@ -44,6 +44,8 @@ export default {
       childNodes: children,
       props: {
         author,
+        image: urlFor(author.image).height(60).width(60).url(),
+        alt: author.image.alt
       },
     }),
   },

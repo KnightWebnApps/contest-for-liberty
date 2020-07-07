@@ -1,10 +1,12 @@
 <script>
+	import DonationDropdown from '../components/DonationDropdown.svelte';
+
 	export let segment;
 </script>
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
+		border-bottom: 3px solid var(--secondary-color);
 		font-weight: 300;
 		padding: 0 1em;
 	}
@@ -26,6 +28,10 @@
 		float: left;
 	}
 
+	.brand {
+		float: right;
+	}
+
 	.selected {
 		position: relative;
 		display: inline-block;
@@ -36,7 +42,7 @@
 		content: '';
 		width: calc(100% - 1em);
 		height: 2px;
-		background-color: rgb(255,62,0);
+		background-color: var(--primary-color);
 		display: block;
 		bottom: -1px;
 	}
@@ -46,15 +52,32 @@
 		padding: 1em 0.5em;
 		display: block;
 	}
+
+	@media(max-width: 460px){
+		.brand {
+			display: none;
+		}
+
+	}
+
+	@media(max-width: 360px){
+		nav {
+			padding: 0 .3em;
+		}
+
+		a {
+			padding: 1em .3em;
+		}
+	}
 </style>
 
 <nav>
 	<ul>
-		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
-		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
+		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>Home</a></li>
+		<li><a class='{segment === "resources" ? "selected" : ""}' href='resources'>Resources</a></li>
+		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>Blog</a></li>
+		<li><a class='{segment === "podcast" ? "selected" : ""}' href='podcast'>Podcast</a></li>
+		<li > <DonationDropdown /> </li>
+		<li class="brand">LOGO</li>
 	</ul>
 </nav>
