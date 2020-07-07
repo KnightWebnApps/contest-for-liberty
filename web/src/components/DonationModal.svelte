@@ -45,7 +45,7 @@
                 {price: selectedDonation, quantity: 1}
             ],
             mode: 'payment',
-            successUrl: 'https://contestforliberty.com/success',
+            successUrl: 'https://contestforliberty.com/thanks',
             cancelUrl: 'https://contestforliberty.com/',
         }).then(function (result) {
             error = result.error.message            
