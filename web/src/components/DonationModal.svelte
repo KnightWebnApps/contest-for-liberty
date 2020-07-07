@@ -3,6 +3,7 @@
 
     export let stripe;
 
+    let error = '';
     let selectedDonation = 'price_1H2D4jEZ0VqQW9WrDooQQu7C';
 
     const donationLevels = [
@@ -37,11 +38,31 @@
             id: 'price_1H2D26EZ0VqQW9WrjIoVbcdk'
         }
     ]
+
+    const checkout = () => {
+        stripe.redirectToCheckout({
+            lineItems: [
+                {price: selectedDonation, quantity: 1}
+            ],
+            mode: 'payment',
+            successUrl: 'https://contestforliberty.com/success',
+            cancelUrl: 'https://contestforliberty.com/',
+        }).then(function (result) {
+            error = result.error.message            
+            // If `redirectToCheckout` fails due to a browser or network
+            // error, display the localized error message to your customer
+            // using `result.error.message`.
+        })
+    }
 </script>
 
 <div class="popup" >
 
     <h1>Donation </h1>
+
+    {#if error !== ''}
+        <p>{error}</p>
+    {/if}
 
     <fieldset>
         <legend>Select An Amount</legend>
@@ -55,19 +76,7 @@
         {/each}
     </fieldset>
 
-    <Button text='Donate' onClick={() => stripe.redirectToCheckout({
-            lineItems: [
-                {price: selectedDonation, quantity: 1}
-            ],
-            mode: 'payment',
-            successUrl: 'https://contestforliberty.com/success',
-            cancelUrl: 'https://contestforliberty.com/',
-        }).then(function (result) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer
-        // using `result.error.message`.
-        })
-    }/>
+    <Button text='Donate' onClick={() => checkout()}/>
 
 </div>
 
@@ -79,8 +88,9 @@
         color: var(--dark);
         text-align: center;
     }
-
-
+    p{
+        color: var(--warning);
+    }
     fieldset {
         border: none;
     }
