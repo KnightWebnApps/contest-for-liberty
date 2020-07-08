@@ -2,13 +2,17 @@
     import Button from '../widgets/Button.svelte';
 
     export let title;
-    export let downloadUrl;
+    export let downloadUrl = '';
     export let link = '';
 </script>
 
 <div class="card">
     <h3>{ title }</h3>
-    <a href={downloadUrl} download >Download It</a>
+    
+    {#if downloadUrl !== ''}
+        <a href={downloadUrl} download >Download It</a>
+    {/if}
+
     {#if link !== ''}
         <a href={ link }>View Original Source</a>
     {/if}

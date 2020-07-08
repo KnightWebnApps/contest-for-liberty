@@ -50,6 +50,9 @@ export default {
       options: {hotspot: true}
     },
     {
+      type: 'resourceReference'
+    },
+    {
       type: 'code'
     }
   ]

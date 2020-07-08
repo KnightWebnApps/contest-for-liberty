@@ -1,3 +1,7 @@
+<svelte:head>
+	<title>Blog</title>
+</svelte:head>
+
 <script context="module">
   import client from '../../sanityClient'
 	export function preload({ params, query }) {
@@ -8,25 +12,18 @@
 </script>
 
 <script>
-  export let posts;
+	import ResourceCard from '../../components/ResourceCard.svelte'
 
-  function formatDate(date) {
-    return new Date(date).toLocaleDateString()
-  }
+	export let posts;
+
+	function formatDate(date) {
+		return new Date(date).toLocaleDateString()
+	}
 </script>
 
-<style>
-	ul {
-		margin: 0 0 1em 0;
-		line-height: 1.5;
-	}
-</style>
 
-<svelte:head>
-	<title>Blog</title>
-</svelte:head>
 
-<h1>Recent posts</h1>
+<h1>Recent Posts</h1>
 
 <ul>
 	{#each posts as post}
@@ -34,6 +31,27 @@
 				tell Sapper to load the data for the page as soon as
 				the user hovers over the link or taps it, instead of
 				waiting for the 'click' event -->
-		<li><a rel='prefetch' href='blog/{post.slug.current}'>{post.title}</a> ({formatDate(post.publishedAt)})</li>
+		<li>
+			<a rel='prefetch' href='blog/{post.slug.current}'>
+				<ResourceCard title={post.title}/>
+			</a> 
+		</li>
 	{/each}
 </ul>
+
+<style>
+	ul {
+		margin: 0;
+		padding: 0;
+		line-height: 1.5;
+		list-style: none;
+	}
+
+	li {
+		margin: 1em 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+</style>
