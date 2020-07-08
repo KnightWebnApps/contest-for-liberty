@@ -21,6 +21,7 @@
         border-radius: 7px;
         height: 150px;
         text-align: center;
+        color: var(--extra-light);
     }
 
     h3 {
