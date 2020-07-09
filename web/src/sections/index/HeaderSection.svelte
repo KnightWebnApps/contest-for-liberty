@@ -5,7 +5,7 @@
 <header>
     <h1>Contest For Liberty 🔔</h1>
 
-    <p>If the news won't give you the documents, we will.</p>
+    <p><i>If the news won't give you the documents, we will.</i></p> 
 
     <div class="quote">
     

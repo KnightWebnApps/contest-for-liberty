@@ -8,7 +8,7 @@
 
 <div class="card">
     <h3>{ title }</h3>
-    
+
     {#if downloadUrl !== ''}
         <a href={downloadUrl} download >Download It</a>
     {/if}
@@ -36,6 +36,7 @@
         background-color: var(--secondary-color);
         border-radius: 7px;
         text-decoration: none;
+        cursor: pointer;
     }
 </style>
 

@@ -56,6 +56,10 @@
     margin: 0;
   }
 
+  .content :global(p){
+    letter-spacing: 1.1px;
+  }
+
   .content :global(ul) {
     line-height: 1.5;
   }
