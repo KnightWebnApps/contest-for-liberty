@@ -8,6 +8,7 @@ import Image from './Image.svelte';
 import Code from './Code.svelte';
 import Author from './Author.svelte';
 import Link from './Link.svelte';
+import ResourceReference from './ResourceReference.svelte';
 
 const urlFor = source => urlBuilder(client).image(source);
 
@@ -46,6 +47,14 @@ export default {
         author,
         image: urlFor(author.image).height(60).width(60).url(),
         alt: author.image.alt
+      },
+    }),
+    resourceReference: ({ children, node: { resourceRef } }) => ({
+      component: ResourceReference,
+      childNodes: children,
+      props: {
+        title: resourceRef.title,
+        downloadUrl: resourceRef.downloadUrl,
       },
     }),
   },

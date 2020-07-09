@@ -11,12 +11,19 @@
       ...,
       body[]{
         ...,
+        _type == 'resourceReference' => {
+          _type,
+          resourceRef->{
+            title,
+            "downloadUrl": document.asset->url
+          }
+        },
         children[]{
           ...,
           _type == 'authorReference' => {
             _type,
             author->
-          }
+          },
         }
       }
     }`;
@@ -25,6 +32,7 @@
     const post = await client
       .fetch(query, { slug })
       .catch(err => this.error(500, err));
+    // console.log({post})
     return { post };
   }
 </script>
