@@ -24,9 +24,10 @@
     }
 
     .quote {
-        background-color: var(--dark);
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         border-radius: 7px;
         padding: 1em 0;
+        color: var(--dark);
     }
 
     blockquote {

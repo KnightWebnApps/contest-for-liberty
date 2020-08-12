@@ -8,17 +8,26 @@
 <style>
 	main {
 		position: relative;
-		max-width: 56em;
-		padding: 2em;
+		box-sizing: border-box;
+		padding: 0;
 		margin: 0 auto;
 		box-sizing: border-box;
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		min-height: 100vh;
+		max-width: 56em;
 	}
 </style>
 
-<Nav {segment}/>
 
 <main>
-	<slot></slot>
-</main>
 
-<Footer/>
+	<Nav {segment}/>
+
+	<div>
+		<slot></slot>
+	</div>
+
+	<Footer/>
+
+</main>

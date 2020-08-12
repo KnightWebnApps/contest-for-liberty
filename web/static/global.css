@@ -4,7 +4,7 @@ body {
 	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
-	background-color: #333;
+	/* background-color: #333; */
 	
 	color: #f0f0f0;
 	--extra-light: #ffffff;
@@ -17,6 +17,7 @@ body {
 	--secondary-color: #4848b1;
 	--warning: var(--red);
 	--success: var(--green);
+	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 
 a {

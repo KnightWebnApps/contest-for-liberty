@@ -10,6 +10,7 @@ import category from './documents/category'
 import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 import resource from './documents/resource'
+import profile from './documents/profile'
 
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
@@ -30,6 +31,7 @@ export default createSchema({
     // in the studio.
     siteSettings,
     resource,
+    profile,
     post,
     category,
     author,

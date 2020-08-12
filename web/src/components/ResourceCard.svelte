@@ -23,6 +23,7 @@
         padding: 1em;
         background-color: var(--primary-color);
         border-radius: 7px;
+        margin: 1em 0;
         /* height: 100px; */
         /* text-align: center; */
     }
