@@ -17,6 +17,10 @@
 		min-height: 100vh;
 		max-width: 56em;
 	}
+
+	.content {
+		padding: 1em;
+	}
 </style>
 
 
@@ -24,7 +28,7 @@
 
 	<Nav {segment}/>
 
-	<div>
+	<div class="content">
 		<slot></slot>
 	</div>
 
