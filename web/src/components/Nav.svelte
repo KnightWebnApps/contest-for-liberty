@@ -78,7 +78,7 @@
 		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>Home</a></li>
 		<li><a class='{segment === "resources" ? "selected" : ""}' href='resources'>Resources</a></li>
 		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>Blog</a></li>
-		<li><a class='{segment === "podcast" ? "selected" : ""}' href='podcast'>Podcast</a></li>
+		<li><a rel=prefetch class='{segment === "memes" ? "selected" : ""}' href='memes'>Memes</a></li>
 		<li > <Modal> <DonationDropdown /> </Modal> </li>
 		<li class="brand">LOGO</li>
 	</ul>

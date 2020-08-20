@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Podcast: Contest For Liberty</title>
+	<title>Podcast</title>
 </svelte:head>
 
 <script>
