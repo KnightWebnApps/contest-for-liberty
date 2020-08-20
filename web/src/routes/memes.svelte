@@ -16,17 +16,27 @@
 </script>
 
 <h1>Memes</h1>
-
-{#each memes as meme}
-    <img src={meme.url} alt={meme.image.alt}>
-{:else}
-    <h2>Coming Soon!</h2>
-{/each}
+<div class="memes">
+    {#each memes as meme}
+        <a class="meme-container" href={meme.url} download >
+            <img src={meme.url} alt={meme.image.alt}>
+        </a>
+    {:else}
+        <h2>Coming Soon!</h2>
+    {/each}
+</div>
 
 
 <style>
+    .memes {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+        gap: 1.5em;
+    }
+
     img {
         width: 100%;
+        height: 400px;
     }
 </style>
 
